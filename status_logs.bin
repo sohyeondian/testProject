@@ -1,0 +1,7 @@
+[2020-10-26 21:20:51]allOn(<xpop.Leds object at 0xb67c8b90>)->None
+[2020-10-26 21:20:54]allOff(<xpop.Leds object at 0xb67c8b90>)->None
+[2020-10-26 21:20:58]setTempo(<xpop.PiezoBuzzer object at 0xb6746770>,120)->None
+[2020-10-26 21:20:58]tone(<xpop.PiezoBuzzer object at 0xb6746770>,4,8,4)->None
+[2020-10-26 21:21:02]print(<xpop.Oled object at 0xb674d350>,'Hello :D')->None
+[2020-10-26 21:21:08]readTemp(<xpop.Sht20 object at 0xb674d670>)->27.05664794921875
+[2020-10-26 21:21:08]readHumi(<xpop.Sht20 object at 0xb674d670>)->34.676116943359375
