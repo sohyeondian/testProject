@@ -62,6 +62,7 @@ class MyPixels(PixelDisplay):
         self.x = 0
         self.y = 0
         self.rgb = [0, 0, 0]
+        super().setBrightness(20)
     
     def set_pix_color(self, rgb):
         self.rgb = [int(rgb[0]), int(rgb[1]), int(rgb[2])]
@@ -77,6 +78,9 @@ class MyPixels(PixelDisplay):
     
     def set_all_pix_on(self):
         super().fill(self.rgb)
+
+    def set_all_pix_off(self):
+        super().clear()
     
 
 @blynk.VIRTUAL_WRITE(9)
@@ -98,11 +102,10 @@ def on_pixcel(on):
 
 @blynk.VIRTUAL_WRITE(13)
 def on_pixcel_all(on):
-    global rgb
     if int(on[0]):
-        set_all_pix_on()
+        pixel.set_all_pix_on()
     else:
-        leds.clear()
+        pixel.set_all_pix_off()
 
 
 @blynk.VIRTUAL_READ(14)
@@ -140,7 +143,7 @@ if __name__ == '__main__':
     ges = Gesture()
     oled = Oled()
     pixel = MyPixels()
-    pixel.setBrightness(20)
+    
     
     while True:
         blynk.run()
